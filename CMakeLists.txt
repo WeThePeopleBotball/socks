@@ -22,8 +22,7 @@ set(LIB_HEADERS
 # Define the static library target
 add_library(socks STATIC ${LIB_SOURCES} ${LIB_HEADERS})
 
-# Make headers accessible to consumers
-target_include_directories(socks PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(socks PUBLIC ${JSON_LIB})
 
 # Set warnings
 target_compile_options(socks PRIVATE -Wall -Wextra -pedantic)
